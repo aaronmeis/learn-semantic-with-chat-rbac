@@ -4,6 +4,8 @@
 
 The Agents system implements a multi-agent architecture for the Semantic Data Chatbot. Each agent is responsible for a specific aspect of the chatbot's operation: query execution, response validation, and quality monitoring. All agents inherit from `BaseAgent` and integrate with the RBAC framework for permission-based access control.
 
+![Overview](./unnamed3.png)
+
 ## Table of Contents
 
 - [Architecture](#architecture)
