@@ -48,7 +48,7 @@ The dashboard will open in your browser at `http://localhost:8501`
 
 ## Features
 
-![Overview](./unnamedv2.png)
+![Overview](./unnamedv3.png)
 
 ### 📊 Overview Tab
 - **Key Metrics**: Total calls, success rate, errors, RBAC checks
