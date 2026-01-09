@@ -1,0 +1,426 @@
+/* ===========================
+   Modern Professional Styles
+   Color Scheme: Deep Blue & Slate
+   =========================== */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    --secondary-color: #0f172a;
+    --accent-color: #06b6d4;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-light: #94a3b8;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ===========================
+   Base Styles
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* ===========================
+   Container & Layout
+   =========================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+    padding: 48px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 24px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ===========================
+   Welcome Message
+   =========================== */
+
+.welcome-message {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 4px solid var(--primary-color);
+    padding: 24px 28px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-sm);
+}
+
+.welcome-message p {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+/* ===========================
+   Tab Content
+   =========================== */
+
+.tab-content {
+    margin-top: 32px;
+}
+
+.tab-pane {
+    display: none;
+    animation: slideIn 0.4s ease-out;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===========================
+   Slides Container
+   =========================== */
+
+.slides-container {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#slide-image {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 400px);
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    margin: 24px auto;
+    display: block;
+    background: white;
+}
+
+/* ===========================
+   Slide Controls
+   =========================== */
+
+.slide-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+#slide-counter {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 8px 16px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    min-width: 80px;
+    text-align: center;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+.slide-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.slide-btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Previous & Next Buttons */
+#prev-slide,
+#next-slide {
+    background: var(--primary-color);
+    color: white;
+}
+
+#prev-slide:hover:not(:disabled),
+#next-slide:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#prev-slide:active:not(:disabled),
+#next-slide:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+#prev-slide:disabled,
+#next-slide:disabled {
+    background: var(--text-light);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Autoplay Button */
+.autoplay-btn {
+    background: var(--accent-color);
+    color: white;
+}
+
+.autoplay-btn:hover {
+    background: #0891b2;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.autoplay-btn.paused {
+    background: #10b981;
+}
+
+.autoplay-btn.paused:hover {
+    background: #059669;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+    
+    .container {
+        padding: 32px 24px;
+        border-radius: 12px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .welcome-message {
+        padding: 20px;
+        margin-bottom: 32px;
+    }
+    
+    .welcome-message p {
+        font-size: 1rem;
+    }
+    
+    .slides-container {
+        padding: 20px;
+    }
+    
+    #slide-image {
+        max-height: calc(100vh - 450px);
+    }
+    
+    .slide-controls {
+        gap: 12px;
+    }
+    
+    .slide-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    #slide-counter {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .container {
+        padding: 24px 16px;
+    }
+    
+    .slides-container {
+        padding: 16px;
+    }
+    
+    #slide-image {
+        max-height: calc(100vh - 500px);
+        min-height: 200px;
+    }
+    
+    .slide-controls {
+        gap: 8px;
+    }
+    
+    .slide-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    #slide-counter {
+        min-width: 70px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===========================
+   Loading & Error States
+   =========================== */
+
+#loading-msg {
+    text-align: center;
+    padding: 50px;
+    color: var(--text-secondary);
+    font-size: 1.2em;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Error message styling */
+.slides-container > div[style*="color: #dc2626"] {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 32px;
+    margin: 20px 0;
+}
+
+/* ===========================
+   Accessibility
+   =========================== */
+
+.slide-btn:focus {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+.slide-btn:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        padding: 20px;
+    }
+    
+    .slide-controls {
+        display: none;
+    }
+}
