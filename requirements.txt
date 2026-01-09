@@ -1,0 +1,26 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# Vector database
+chromadb==0.4.15
+
+# LLM clients
+openai==1.3.0  # Optional, only needed if using OpenAI
+requests==2.31.0  # Required for Ollama
+
+# Database
+# sqlite3 is built-in to Python, no install needed
+
+# Utilities
+python-dotenv==1.0.0
+
+# Testing (optional)
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Dashboard
+streamlit==1.28.0
+plotly==5.17.0
+pandas==2.1.3
