@@ -4,6 +4,8 @@
 
 The Role-Based Access Control (RBAC) framework provides a comprehensive permission management system for the Semantic Data Chatbot. It implements a role-based model where users are assigned roles, and roles contain sets of permissions. This allows for fine-grained access control across all system components.
 
+![Overview](./unnamed99.png)
+
 ## Table of Contents
 
 - [Architecture](#architecture)
