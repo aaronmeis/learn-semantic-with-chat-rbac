@@ -7,6 +7,9 @@ The Executive Dashboard provides a real-time, visual demonstration of:
 2. **RBAC Usage** - How role-based access control is enforced at each agent level
 3. **System Performance** - Metrics and analytics
 
+![Overview](./unnamedv1.png)
+
+
 ## Quick Start
 
 ### 1. Install Dependencies
