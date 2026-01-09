@@ -2,7 +2,7 @@
 
 A production-ready semantic data chatbot with a multi-agent architecture featuring RBAC (Role-Based Access Control) for secure operations.
 
-![Overview](./unnamed.png)
+![Overview](./unnamed5.png)
 
 ## Features
 
